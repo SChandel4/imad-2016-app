@@ -17,6 +17,10 @@ app.get('/ui/me.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'me.jpg'));
 });
 
+app.get('/ui/favicon.ico', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
+});
+
 app.get('/ui/bsnl.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bsnl.png'));
 });
