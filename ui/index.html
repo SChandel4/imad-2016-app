@@ -8,8 +8,8 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-     <link rel="stylesheet" type="text/css" href="ui/style.css">
-     <link rel="icon" type="image/png" href="ui/s-icon.png">
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="icon" href="img/speech-balloon-white-s-icon.png">
 
 </head>
 
@@ -29,9 +29,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#About">About Me</a></li>
+        <li><a href="#Experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -43,7 +43,7 @@
 
 <div class="container-fluid bg1">
 	 <div class="col-md-6">
-  	<img class="img-responsive img-circle margin" img src="/ui/me.jpg" alt="Me">
+  	<img class="img-responsive img-circle margin" src="img/me.jpg" alt="Me">
   	<h1>Suryansh Chandel</h1>
   </div>
   <div class="col-md-6 skills">
@@ -59,7 +59,7 @@
 
 <div class="container-fluid bg-2 text-center" id="About">
   
-   <h3 class="margin">About Me</h3>
+   <h2 class="margin">About Me</h2>
 
    <div class="col-md-6">
 				<h3>Summary</h3>
@@ -110,8 +110,110 @@
 
 <!-- About Me ends-->
 
+<!-- Portfolio -->
+
+<div class="container-fluid bg-3 text-center" id="Experience">    
+     <h2 class="margin">Experience</h2><br>
+  			
+  		<div class="row">
+    		
+    		<div class="col-sm-4">
+      		<p>Completed one month training in Wireless Networks from Bharat Sanchar Nigam Limited.</p>
+      		<img src="img/1.png" class="img-responsive img-circle margin" alt="Image1" style="padding-left: 50px" height="350" width="350">
+    		</div>
+    
+    		<div class="col-sm-4"> 
+      		<p>Managed a 4 day event during Aaruush - The techinical fest of SRM University, Chennai.</p>
+      		<img src="img/aaruush.png" class="img-responsive img-circle margin" alt="Image2" style="padding-left: 50px" height="350" width="350">
+    		</div>
+    
+    		<div class="col-sm-4"> 
+      		<p>Won the state topper in National Science Olympiad and International Maths Olympiad respectivily.</p>
+      		<img src="img/2.png" class="img-responsive img-circle margin" alt="Image3" style="padding-left: 50px" height="350" width="350">
+    		</div>
+  		</div>
+</div>
+
+<!-- Portfolio ends-->
+
+<!-- Contact footer-->
+
+<footer class="text-center" id="contact">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                            <h3>Location</h3>
+                            <p>SRM University
+                            <br>Chennai, TN 603203</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                            <a href="https://www.facebook.com/suryansh.chandel" target="_blank"><img src="img/Facebook-icon.png"></a>
+                            </li>
+                            <li>
+                            <a href="https://plus.google.com/114368704880324716526" target="_blank"><img src="img/Google-Plus-icon.png"></a>
+                            </li>
+                            <li>
+                            <a href="https://in.linkedin.com/in/suryansh-chandel-38445a117" target="_blank"><img src="img/Linkedin-icon.png"></a>
+                            </li>
+                            <li>
+                            <a href="https://github.com/SChandel4" target="_blank"><img src="img/Github-icon.png"></a>
+                            </li>
+                            <li>
+                            <a href="https://suryanshchandel.com" target="_blank"><img src="img/Website-icon.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    	<div class="footer-col col-md-4">
+                        	<h3>Contact</h3>
+                        	<p>Feel free to contact anytime on any of the social-networking platforms</p>
+                   		</div>
+                	</div>
+            	</div>
+        	</div>
+        	<div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Suryansh Chandel 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- Contact footer ends-->
+
+<!-- Scrollspy-->
+
+<script>
+$(document).ready(function(){
+ 
+  $('body').scrollspy({target: ".navbar", offset: 50});
 
 
+  $("#myNavbar a").on('click', function(event) {
+   
+    if (this.hash !== "") {
+   
+      event.preventDefault();
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        window.location.hash = hash;
+      });
+    }  
+  });
+});
+</script>
+
+<!-- Scrollspy ends-->
 
 </body>
 </html>
